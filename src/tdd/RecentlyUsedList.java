@@ -9,4 +9,9 @@ public class RecentlyUsedList {
     public List<Integer> getItems() {
         return items;
     }
+
+    public List<Integer> addToList(int item) {
+        items.addFirst(item);
+        return items;
+    }
 }
