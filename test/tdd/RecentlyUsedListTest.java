@@ -54,5 +54,10 @@ public class RecentlyUsedListTest {
 
     }
 
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void illegalRead() {
+        RecentlyUsedList list = new RecentlyUsedList();
+        list.readFromList(0);
+    }
 
 }
