@@ -11,7 +11,8 @@ public class RecentlyUsedList {
         return items;
     }
 
-    public List<Integer> addToList(int item) {
+    public List<Integer> addToList(Integer item) {
+        items.remove(item);
         items.addFirst(item);
         return items;
     }
