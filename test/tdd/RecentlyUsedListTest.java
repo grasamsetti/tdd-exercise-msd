@@ -28,4 +28,15 @@ public class RecentlyUsedListTest {
         assertThat(list.readFromList(1), is(2));
         assertThat(list.readFromList(2), is(1));
     }
+
+    @Test
+    public void recentAsFirstInList() {
+        RecentlyUsedList list = new RecentlyUsedList();
+        list.addToList(1);
+        assertThat(list.readFromList(0),is(1));
+        list.addToList(2);
+        assertThat(list.readFromList(0),is(2));
+        list.addToList(3);
+        assertThat(list.readFromList(0),is(3));
+    }
 }
